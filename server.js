@@ -1,4 +1,3 @@
-
 import "dotenv/config";
 import express from "express";
 import helmet from "helmet";
@@ -188,7 +187,6 @@ app.post("/api/chat", async (req, res) => {
     });
   }
 });
-
 app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
@@ -196,7 +194,7 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
-app.get("*", (_req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "index.html")
   );
