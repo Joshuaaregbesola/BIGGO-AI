@@ -194,9 +194,10 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
-app.get("/{*splat}", (req, res) => {
+
+app.get("/googleb67c974371232981.html", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "index.html")
+    path.join(__dirname, "public", "googleb67c974371232981.html")
   );
 });
 
